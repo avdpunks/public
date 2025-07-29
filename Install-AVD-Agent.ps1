@@ -53,7 +53,7 @@ try {
     Start-Sleep -Seconds 10
     Write-Log "Installing AVD Agent..."
     Unblock-File $AgentInstaller
-    Start-Process -FilePath 'msiexec.exe' -ArgumentList "/i `"$AgentInstaller`" /quiet REGISTRATIONTOKEN=$RegToken" -Wait
+    Start-Process -FilePath 'msiexec.exe' -ArgumentList "/i `"$AgentInstaller`" /quiet REGISTRATIONTOKEN=$AVDRegistrationToken" -Wait
     Write-Log "Successfully installed AVD Agent."
 
     Write-Log "Downloading AVD Agent Bootloader installer..."
